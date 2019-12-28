@@ -6,7 +6,8 @@ Based on
 ## TL;DR
 
 ```
-$ git clone https://github.com/gkzz/lambda_twbot.git
+$ git clone https://github.com/gkzz/lambda_twbot.git \
+&& cd lambda_twbot
 $ aws configure
 $ sudo npm install -g serverless
 $ serverless create \
