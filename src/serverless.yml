@@ -1,0 +1,37 @@
+service: src
+
+custom:
+  dotenv:
+    basePath: ./config/
+  stage: ${env:STAGE}
+  region: ${env:REGION}
+  pythonRequirements:
+    dockerizePip: non-linux
+
+provider:
+  name: aws
+  runtime: python3.7
+  stage: ${self:custom.stage}
+  region: ${self:custom.region}
+
+plugins:
+  - serverless-python-requirements
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+functions:
+  rtweet:
+    handler: handler.rtweet
+    memorySize: 256
+    timeout: 90s
+    events:
+      - schedule: cron(0/20 * * * ? *)
+  
+  fav:
+    handler: handler.fav
+    memorySize: 256
+    timeout: 90s
+    events:
+      - schedule: cron(0/600 * * * ? *)
+
+

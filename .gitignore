@@ -1,0 +1,29 @@
+# general
+.
+..
+__pycache__
+*.pyc
+
+# python virtual env
+36
+37
+
+# uwsgi, nginx
+*.log
+.pid
+.sock
+
+# vscode
+.vscode
+
+
+# env
+.env
+*.env
+
+# node_modules
+node_modules
+
+# package.json
+package.json
+package-lock.json
