@@ -8,10 +8,8 @@ __pycache__
 36
 37
 
-# uwsgi, nginx
-*.log
-.pid
-.sock
+# python
+src/handler.py
 
 # vscode
 .vscode
