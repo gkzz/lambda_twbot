@@ -17,6 +17,7 @@ $ serverless create \
 $ sudo npm install --save serverless-python-requirements
 $ sudo npm install --save serverless-dotenv-plugin
 $ sudo npm install --save serverless-offline
+$ cat src/handler.py.tmpl > src/handler.py
 $ cat config/.env.tmpl > config/.env
 $ serverless deploy
 ```
