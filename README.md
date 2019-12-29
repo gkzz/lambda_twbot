@@ -23,7 +23,7 @@ $ serverless deploy
 ```
 
 ```
- tree -L 2
+$ tree -L 2
 .
 └── src                   
     ├── 37                 
