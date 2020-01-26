@@ -5,8 +5,8 @@ custom:
     basePath: ./config/
   stage: ${env:STAGE}
   region: ${env:REGION}
-  pythonRequirements:
-    dockerizePip: non-linux
+  #pythonRequirements:
+  #  dockerizePip: non-linux
 
 provider:
   name: aws
@@ -22,14 +22,14 @@ plugins:
 functions:
   rtweet:
     handler: handler.rtweet
-    memorySize: 256
+    memorySize: 128
     timeout: 90s
     events:
       - schedule: cron(0/20 * * * ? *)
   
   fav:
     handler: handler.fav
-    memorySize: 256
+    memorySize: 128
     timeout: 90s
     events:
       - schedule: cron(0/600 * * * ? *)
