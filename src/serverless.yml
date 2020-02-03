@@ -23,14 +23,14 @@ functions:
   rtweet:
     handler: handler.rtweet
     memorySize: 128
-    timeout: 90s
+    timeout: 10s
     events:
       - schedule: cron(0/20 * * * ? *)
   
   fav:
     handler: handler.fav
     memorySize: 128
-    timeout: 90s
+    timeout: 10s
     events:
       - schedule: cron(0/600 * * * ? *)
 
