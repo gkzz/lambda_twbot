@@ -9,6 +9,7 @@ Based on
 $ git clone https://github.com/gkzz/lambda_twbot.git \
 && cd lambda_twbot
 $ aws configure
+$ npm init
 $ sudo npm install -g serverless
 $ serverless create \
 > --template aws-python3 \
